@@ -1,0 +1,18 @@
+# CloudCode Worker 配置文件
+name = "cloudcode"
+main = "worker.js"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+
+# KV 命名空间（先创建：wrangler kv namespace create "KV"）
+[[kv_namespaces]]
+binding = "KV"
+id = "REPLACE_WITH_YOUR_NAMESPACE_ID"
+
+# 如需自定义域名，在此配置
+# routes = [
+#   { pattern = "yourdomain.com", custom_domain = true }
+# ]
+
+# 管理密码（推荐用 secret 设置，不写入本文件）
+# 在终端执行： wrangler secret put ADMIN_PASSWORD
